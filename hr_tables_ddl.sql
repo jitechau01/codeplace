@@ -18,6 +18,7 @@ CREATE TABLE locations (
   country_id     CHAR(2)
 );
 
+
 CREATE TABLE departments (
   department_id    NUMBER(4),
   department_name  VARCHAR2(30),
