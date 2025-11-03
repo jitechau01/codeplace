@@ -1,0 +1,21 @@
+name: 'dbt_operations'
+version: '1.0.0'
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'dbt_operations'
+
+models:
+  dbt_operations:
+      staging:
+        +materialized: table
+        +schema: staging
+      intermediate:
+        +materialized: table
+        +schema: intermediate
+      marts:
+        +materialized: view
+        schema: marts
+
+seeds:
+  dbt_operations:
+    +schema: lookup

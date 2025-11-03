@@ -1,0 +1,9 @@
+sources:
+  - name: landing
+    database: sales
+    schema: landing
+    tables:
+    - name: orders
+    - name: products
+    - name: reviews
+    - name: users
