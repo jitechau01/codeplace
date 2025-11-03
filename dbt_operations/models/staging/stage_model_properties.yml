@@ -1,0 +1,22 @@
+models:
+  - name: bronze_orders
+    columns:
+      - name: ID
+      #These tests are generic
+        data_tests:
+          - unique
+          - not_null
+  - name: bronze_products
+    columns:
+      - name: ID
+      #All below tests are generic
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              field: product_id
+              to: ref('bronze_orders') 
+      - name: category              
+        data_tests:
+            - accepted_values:
+                values: ["Gadget","Doohickey","Widget","Gizmo"]
