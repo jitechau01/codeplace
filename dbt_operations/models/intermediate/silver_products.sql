@@ -7,4 +7,5 @@ SELECT
     vendor,
     price
 FROM
-{{ ref('bronze_products') }}
+{{ ref('products_snapshot') }}
+where dbt_valid_to is null
