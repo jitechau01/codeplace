@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  my_first_lambda
+
+  Sample SAM Template for my_first_lambda
+
+Resources:
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: hello_world/
+      Handler: create_Snowflake_AWS_S3_Integration.lambda_handler
+      Runtime: python3.12
+      Timeout: 900
+      Environment:
+        Variables:
+          restapiurl: http://dummyurl
+          dbname: postgres
