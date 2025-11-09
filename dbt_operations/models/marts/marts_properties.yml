@@ -1,0 +1,4 @@
+models:
+  - name: gold_daily_sales 
+    config:
+      materialized: table 

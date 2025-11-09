@@ -1,3 +1,9 @@
+{{
+  config(
+    materialized = 'table',
+    )
+}}
+
 SELECT
     to_date(r.created_at) as review_date,
     r.product_id,
